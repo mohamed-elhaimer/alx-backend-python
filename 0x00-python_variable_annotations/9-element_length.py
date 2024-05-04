@@ -5,4 +5,5 @@ from typing import Tuple, List, Sequence, Iterable
 
 
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    """ element_length return list of tuples with item and its len """
     return [(i, len(i)) for i in lst]
