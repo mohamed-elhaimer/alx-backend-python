@@ -9,5 +9,8 @@ async def wait_random(max_delay: int = 10) -> float:
       between 0 and maw_delay"""
     if max_delay < 0:
         raise ValueError("max_delay must be a positive number")
-    await asyncio.sleep(random.uniform(0, max_delay))
-    return random.uniform(0, max_delay)
+
+    delay = random.uniform(0, max_delay)
+    await asyncio.sleep(delay)
+
+    return delay
